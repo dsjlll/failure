@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prom Invitation</title>
+    <style>
+        body {
+            font-family: Garamond, Garamond;
+            text-align: center;
+            background-color: pink; /* Setting background color to pink */
+        }
+        .invitation {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 50px; /* Changed font size to 50px */
+        }
+        p {
+            font-size: 30px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #d3468b;
+        }
+        .error-message {
+            color: red;
+            font-size: 80px;
+            margin-top: 100px;
+        }
+        .gif-container {
+            display: none;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <h1>Will You Go to Prom with Me?</h1>
+        <p>Rishabh Sir!</p>
+        <p>Under the stipulations of consent and in accordance with the applicable laws.
+         would you do me the honor of accompanying me to the prom as my date?</p>
+        <button onclick="showError()">Yes, I'd love to!</button>
+        <button onclick="showErrorMessage()">No, thank you.</button>
+        <p class="error-message" id="error-message" style="display: none;">I'm sorry, this invitation is only for those who want to say yes!</p>
+        <div class="gif-container" id="gif-container">
+            <img src="https://49.media.tumblr.com/2c74a05e0e62feaad172f2aa26f20b89/tumblr_o5obhjtWNn1tgz4rco1_500.gif" alt="Dancing GIF">
+        </div>
+    </div>
+
+    <script>
+        function showErrorMessage() {
+            document.getElementById("error-message").style.display = "block";
+        }
+
+        function showError() {
+            document.getElementById("gif-container").style.display = "block";
+        }
+    </script>
+</body>
+</html>
